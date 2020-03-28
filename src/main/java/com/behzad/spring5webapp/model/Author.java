@@ -30,6 +30,15 @@ public class Author {
         this.books = books;
     }
 
+    @Override
+    public String toString() {
+        return "{" +
+                "\"id\":\"" + id +
+                "\", \"firstName\":\"" + firstName +
+                "\", \"lastName\":\"" + lastName +
+                "\"}";
+    }
+
     public Long getId() {
         return id;
     }
