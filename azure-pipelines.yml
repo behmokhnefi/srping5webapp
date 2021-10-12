@@ -7,7 +7,17 @@ trigger:
 - master
 
 pool:
-  vmImage: ubuntu-latest
+  vmImage: - task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Azure subscription 1(d1697347-ad17-4021-ae72-0604548d16a9)'
+    appType: 'webAppLinux'
+    WebAppName: 'myfirstAzureApp9561'
+    deployToSlotOrASE: true
+    ResourceGroupName: 'springbootReactAPP'
+    SlotName: 'production'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    RuntimeStack: 'JAVA|11-java11'
 
 steps:
 - task: Maven@3
