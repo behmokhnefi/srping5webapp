@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: - task: AzureRmWebAppDeployment@4
+  vmImage: 
   inputs:
     ConnectionType: 'AzureRM'
     azureSubscription: 'Azure subscription 1(d1697347-ad17-4021-ae72-0604548d16a9)'
