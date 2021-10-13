@@ -21,6 +21,12 @@ public class BookController {
 
     @Autowired
     BookRepository bookRepository;
+    
+    
+     @GetMapping("/")
+    public String getBooks(){
+       return "Hello AZure!!!";
+    }
 
     @GetMapping("/booksget")
     public List<Book> getBooks(){
