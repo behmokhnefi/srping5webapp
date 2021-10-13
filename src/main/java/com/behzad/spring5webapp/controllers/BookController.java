@@ -24,7 +24,7 @@ public class BookController {
     
     
      @GetMapping("/")
-    public String getBooks(){
+    public String index(){
        return "Hello AZure!!!";
     }
 
